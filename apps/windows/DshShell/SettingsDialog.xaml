@@ -1,0 +1,34 @@
+<ContentDialog
+    x:Class="DshShell.SettingsDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Server settings"
+    PrimaryButtonText="Save"
+    CloseButtonText="Cancel"
+    DefaultButton="Primary"
+    PrimaryButtonClick="OnPrimaryClick">
+
+    <StackPanel Spacing="10" MinWidth="380">
+        <TextBox
+            x:Name="UrlBox"
+            Header="Server URL"
+            PlaceholderText="http://127.0.0.1:3080" />
+        <TextBox
+            x:Name="CommandBox"
+            Header="Launch command"
+            PlaceholderText="pnpm dsh web" />
+        <TextBox
+            x:Name="CwdBox"
+            Header="Working directory"
+            PlaceholderText="empty = auto-detect repository root" />
+        <TextBlock
+            TextWrapping="Wrap"
+            Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+            Text="The shell probes the URL first and only runs the command when nothing is listening. Server output goes to %LocalAppData%\DshShell\server.log." />
+        <TextBlock
+            x:Name="ErrorText"
+            TextWrapping="Wrap"
+            Foreground="{ThemeResource SystemFillColorCriticalBrush}"
+            Visibility="Collapsed" />
+    </StackPanel>
+</ContentDialog>

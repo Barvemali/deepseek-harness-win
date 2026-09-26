@@ -197,6 +197,8 @@
     "dsh": "node --import tsx/esm apps/cli/src/bin.ts",
     "demo:ptc": "node scripts/demo-ptc.mjs",
     "demo:inspector": "node --import tsx/esm apps/cli/src/bin.ts web --patch ./packages/experimental/inspector/cordis.source.patch.yml",
+    "shell:windows": "dotnet run --project apps/windows/DshShell",
+    "shell:windows:publish": "dotnet publish apps/windows/DshShell -c Release -r win-x64 -o dist-exe/dsh-shell",
     "mock:llm": "node --import tsx packages/test-support/llm-mock-server/src/bin.ts",
     "start:web": "node --import tsx/esm apps/cli/src/bin.ts web",
     "dev:web": "tsx scripts/dev-web.ts --poll",

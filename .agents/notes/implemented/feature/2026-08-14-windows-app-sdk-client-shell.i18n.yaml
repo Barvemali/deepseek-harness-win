@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-08-14-windows-app-sdk-client-shell.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-14-windows-app-sdk-client-shell.md
+/agent-note-windows-app-sdk-client-shell:
+  en: 5bda2c5c7246b55d
+  zh: 2c0d65629c80ff27
+/agent-note-windows-app-sdk-client-shell/problem:
+  en: 6e8c6dd4db4bb993
+  zh: 63e6ca6edbf22a95
+/agent-note-windows-app-sdk-client-shell/decision:
+  en: 51a529f54c68da0c
+  zh: e17cb03c5cd9de31
+/agent-note-windows-app-sdk-client-shell/alternatives-considered:
+  en: 39e339e35df94f0e
+  zh: 74418b9dd3347585
+/agent-note-windows-app-sdk-client-shell/consequences:
+  en: 2898d7b4101ac2fe
+  zh: 25340f5930c3c6b7

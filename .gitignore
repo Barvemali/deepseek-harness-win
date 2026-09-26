@@ -26,6 +26,7 @@ tmp/
 .claude/launch.json
 .claude/settings.json
 .vscode/
+.vs/
 .DS_Store
 .idea
 mise.toml
@@ -37,6 +38,8 @@ python/**/__pycache__/
 python/**/.pytest_cache/
 packages/**/__pycache__/
 apps/web/dist/
+apps/windows/**/bin/
+apps/windows/**/obj/
 .artifacts/
 .dsh-build/
 .playwright-mcp/
