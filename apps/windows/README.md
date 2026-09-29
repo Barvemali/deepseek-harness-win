@@ -89,13 +89,10 @@ The shell and server output both append to `%LocalAppData%\DshShell\server.log`
   `pnpm run build:lib:client` alone fails with unresolved `/remote` modules.
   A pull that deleted a package also leaves that package's `lib/` output
   behind — the bundling pass still reads a directory whose `package.json` is
-  gone — and fails with `MISSING_EXPORT`; delete those manifest-less package
-  directories before the rebuild (`pnpm run clean` is the tool for it, but on
-  dsh 0.1.7-rc.2 it aborts on `lib/desktop-keyboard-test-types` from
-  `tsconfig.desktop-keyboard-tests.json` before removing anything). When the
-  spawn fails for either reason the status bar shows the exit code, the dialog
-  names the command that repairs the checkout, and `server.log` holds the full
-  output.
+  gone — and fails with `MISSING_EXPORT`; `pnpm run clean` removes those
+  manifest-less directories before the rebuild. When the spawn fails for
+  either reason the status bar shows the exit code, the dialog names the
+  command that repairs the checkout, and `server.log` holds the full output.
 - `dotnet build` resolves the Pri-generation MSBuild tasks from a Visual
   Studio install via the `AppxMSBuildToolsPath` fallback in `DshShell.csproj`
   (VS 18 Community and VS 2022 Build Tools paths); a machine without either
